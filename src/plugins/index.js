@@ -1,2 +1,0 @@
-import "./flashMessage";
-import "./axios";

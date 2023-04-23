@@ -1,20 +1,12 @@
 <template>
   <div id="app">
-    <PageHeader />
-    <PageNavigation />
     <router-view />
   </div>
 </template>
 <script>
-import PageHeader from "@/components/PageHeader.vue";
-import PageNavigation from "@/components/PageNavigation.vue";
-
 export default {
   name: "App",
-  components: {
-    PageHeader,
-    PageNavigation,
-  },
+  components: {},
 };
 </script>
 

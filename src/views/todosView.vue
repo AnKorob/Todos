@@ -63,7 +63,7 @@
 import { mapMutations, mapState, mapActions, mapGetters } from "vuex";
 
 export default {
-  name: "TestTest",
+  name: "todosView",
   data: function () {
     return {
       checked: true,
@@ -72,32 +72,32 @@ export default {
     };
   },
   computed: {
-    ...mapState("test", [
+    ...mapState("todos", [
       "users",
       "todos",
       "todosDone",
       "userTodos",
       "userMail",
     ]),
-    ...mapGetters("test", ["getCompletedTodos", "getNotCompletedTodos"]),
+    ...mapGetters("todos", ["getCompletedTodos", "getNotCompletedTodos"]),
   },
   mounted() {
     this.getUsers();
   },
   methods: {
     ...mapActions({
-      getTodos: "test/getTodos",
-      getUsers: "test/getUsers",
-      getUserTodos: "test/getUserTodos",
-      getUserMail: "test/getUserMail",
+      getTodos: "todos/getTodos",
+      getUsers: "todos/getUsers",
+      getUserTodos: "todos/getUserTodos",
+      getUserMail: "todos/getUserMail",
     }),
     ...mapMutations({
-      setUsers: "test/SET_USERS",
-      setTodos: "test/SET_TODOS",
-      setTodosDone: "test/SET_TODOS_DONE",
-      removeTodos: "test/REMOVE_TODOS",
-      SET_TAB_STATUS: "test/SET_TAB_STATUS",
-      setMail: "test/SET_MAIL",
+      setUsers: "todos/SET_USERS",
+      setTodos: "todos/SET_TODOS",
+      setTodosDone: "todos/SET_TODOS_DONE",
+      removeTodos: "todos/REMOVE_TODOS",
+      SET_TAB_STATUS: "todos/SET_TAB_STATUS",
+      setMail: "todos/SET_MAIL",
     }),
     showInfo(id) {
       this.isLoading = true;
